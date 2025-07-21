@@ -7,6 +7,8 @@ import { setupVite, serveStatic, log } from "./vite";
 import session from "express-session";
 import connectPg from "connect-pg-simple";
 import { createStorage } from "./storage";
+import cors from "cors";
+
 
 // --- Add session middleware before routes ---
 const PgSession = connectPg(session);
@@ -24,6 +26,13 @@ const sessionStore = new PgSession({
 });
 
 const app = express();
+
+app.use(cors({
+  origin: 'https://www.fastcfscn.com', // change to your domain in production for security
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
