@@ -41,12 +41,6 @@ app.use(
     secret: process.env.SESSION_SECRET || "keyboard cat",
     resave: false,
     saveUninitialized: false,
-    cookie: {
-      httpOnly: true,
-      sameSite: "strict", // PATCH: Use "strict" for best CSRF protection
-      secure: process.env.NODE_ENV === "production", // true if HTTPS
-      maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
-    },
   })
 );
 
