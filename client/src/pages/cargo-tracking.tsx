@@ -162,10 +162,10 @@ export default function CargoTrackingPage() {
             <section className="bg-fastblue py-20">
               <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Track Your Air Cargo
+                  Track Your Cargo
                 </h1>
                 <p className="text-xl text-africangold mb-8">
-                  Get real-time updates on your air shipment status and location
+                  Get real-time updates on your shipment status and location
                 </p>
                 <Card className="shadow-xl">
                   <CardContent className="p-8">
