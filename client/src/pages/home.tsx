@@ -134,7 +134,7 @@ export default function HomePage() {
             <Card className="shadow-xl border border-gray-100">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Track Your Cargo</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Track Your Air Cargo</h2>
                   <p className="text-gray-600">Enter your tracking number to get real-time cargo status</p>
                 </div>
                 
