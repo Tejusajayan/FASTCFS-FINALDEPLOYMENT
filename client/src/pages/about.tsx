@@ -11,6 +11,7 @@ import cfo from "@assets/RENJIT.jpg";
 import boss from "@assets/Kannan.jpg";
 import gm from "@assets/Sreekumar.jpg";
 import aboutvessel from "@/assets/ABOUT_US.jpg";
+import favi from "@/assets/favicon.ico";
 
 const stats = [
 	{ label: "Years of Experience", value: "7", icon: Clock },
@@ -87,7 +88,7 @@ export default function AboutPage() {
 				/>
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://fastcfs.com/about" />
-				<link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+				<link rel="icon" type="image/x-icon" href={favi} />
 			</Helmet>
 			<Header />
 

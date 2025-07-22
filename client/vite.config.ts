@@ -4,6 +4,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  base: "/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -17,19 +18,19 @@ export default defineConfig({
       : []),
   ],
   css: {
-    postcss: path.resolve(import.meta.dirname, "postcss.config.js"),
+    postcss: './postcss.config.js',
   },
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      "@": path.resolve(__dirname,"./src"),
+      "@shared": path.resolve(__dirname, "../shared"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
     },
   },
   assetsInclude: ['**/*.JPG', '**/*.jpg'],
-  root: path.resolve(import.meta.dirname, "client"),
+  root:".",
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: "../dist/client",
     emptyOutDir: true,
   },
   server: {

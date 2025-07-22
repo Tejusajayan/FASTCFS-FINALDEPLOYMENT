@@ -62,15 +62,15 @@ function Router() {
       <Route path="/faq" component={FaqPage} />
       
       {/* Protected admin routes */}
-      <ProtectedRoute path="/grapeissweet" component={AdminDashboard} />
-      <ProtectedRoute path="/grapeissweet/cargo" component={CargoManagement} />
-      <ProtectedRoute path="/grapeissweet/blog" component={BlogManagement} />
-      <ProtectedRoute path="/grapeissweet/testimonials" component={TestimonialsManagement} />
-      <ProtectedRoute path="/grapeissweet/branches" component={BranchesManagement} />
-      <ProtectedRoute path="/grapeissweet/seo" component={SeoSettings} />
-      <ProtectedRoute path="/grapeissweet/contact-submissions" component={ContactSubmissions} />
-      <ProtectedRoute path="/grapeissweet/faq" component={FaqManagementPage} />
-
+      <ProtectedRoute path="/fcfstube" component={AdminDashboard} />
+      <ProtectedRoute path="/fcfstube/cargo" component={CargoManagement} />
+      <ProtectedRoute path="/fcfstube/blog" component={BlogManagement} />
+      <ProtectedRoute path="/fcfstube/testimonials" component={TestimonialsManagement} />
+      <ProtectedRoute path="/fcfstube/branches" component={BranchesManagement} />
+      <ProtectedRoute path="/fcfstube/seo" component={SeoSettings} />
+      <ProtectedRoute path="/fcfstube/contact-submissions" component={ContactSubmissions} />
+      <ProtectedRoute path="/fcfstube/faq" component={FaqManagementPage} />
+      
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

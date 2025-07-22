@@ -11,6 +11,7 @@ import { Link } from "wouter";
 import { formatDate } from "@/lib/utils";
 import type { BlogPost } from "@shared/schema";
 import { Helmet } from "react-helmet-async";
+import favi from "@/assets/favicon.ico";
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -32,7 +33,7 @@ export default function BlogPostPage() {
     return (
       <div className="min-h-screen bg-white">
         <Helmet>
-          <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+          <link rel="icon" type="image/x-icon" href={favi} />
         </Helmet>
         <Header />
         <div className="pt-16">

@@ -32,7 +32,7 @@ import {
   insertFaqSchema,
 } from "@shared/schema";
 import { db } from "./db";
-import { eq, desc, and, like, count } from "drizzle-orm";
+import { eq, desc, count } from "drizzle-orm";
 import session from "express-session";
 
 // Remove: const PostgresSessionStore = connectPg(session);
@@ -502,6 +502,7 @@ export class DatabaseStorage implements IStorage {
     const ss = String(now.getSeconds()).padStart(2, '0');
     const rn = String(Math.floor(Math.random() * 100)).padStart(2, '0');
 
+    // Remove prefix, just return the numbers
     return `${dd}${mm}${yy}${hh}${min}${ss}${rn}`;
   }
 }

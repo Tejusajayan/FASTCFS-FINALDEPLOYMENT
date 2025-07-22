@@ -16,6 +16,7 @@ import { insertContactSubmissionSchema, type InsertContactSubmission } from "@sh
 import { apiRequest } from "@/lib/queryClient";
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
+import favi from "@assets/favicon.ico";
 
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -80,7 +81,7 @@ export default function ContactPage() {
           <meta property="og:description" content={seo?.description || "Ready to streamline your logistics? Contact our expert team for personalized solutions"} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://fastcfs.com/contact" />
-          <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+          <link rel="icon" type="image/x-icon" href={favi} />
         </Helmet>
         <Header />
         <div className="pt-16">

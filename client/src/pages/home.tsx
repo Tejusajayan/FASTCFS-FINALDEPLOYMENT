@@ -20,11 +20,10 @@ import {
   Mail,
   Search,
   ArrowRight,
-  Package,
-  CheckCircle
 } from "lucide-react";
 import type { Branch, BlogPost } from "@shared/schema";
 import { useState } from "react";
+import favi from "@assets/favicon.ico";
 
 const services = [
   {
@@ -120,7 +119,7 @@ export default function HomePage() {
           <meta property="og:image" content={seo.ogImage} />
         )}
         <meta property="og:title" content={seo?.title || "Home | FAST CFS"} />
-        <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href={favi} />
         {/* Add more meta tags as needed */}
       </Helmet>
       <div className="min-h-screen bg-white">

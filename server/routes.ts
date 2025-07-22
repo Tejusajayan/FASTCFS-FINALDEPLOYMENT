@@ -2,7 +2,7 @@ import express, { type Express, type Request } from "express";
 import { createServer, type Server } from "http";
 import { setupAuth } from "./auth";
 // Remove: import { storage } from "./storage";
-import session, { Session, SessionData } from "express-session";
+import { Session, SessionData } from "express-session";
 import {
   insertContactSubmissionSchema,
   insertCargoSchema,

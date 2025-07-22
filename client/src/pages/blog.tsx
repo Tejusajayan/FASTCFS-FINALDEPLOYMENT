@@ -11,6 +11,7 @@ import { Link } from "wouter";
 import { formatDate } from "@/lib/utils";
 import type { BlogPost } from "@shared/schema";
 import { Helmet } from "react-helmet-async";
+import favi from "@assets/favicon.ico";
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -58,7 +59,7 @@ export default function BlogPage() {
           <meta property="og:description" content={seo?.description || "Stay updated with the latest trends, insights, and developments in logistics and freight forwarding"} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://fastcfs.com/blog" />
-          <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+          <link rel="icon" type="image/x-icon" href={favi} />
         </Helmet>
         <Header />
         <div className="pt-16">

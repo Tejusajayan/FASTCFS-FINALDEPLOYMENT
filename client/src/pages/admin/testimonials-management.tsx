@@ -154,12 +154,6 @@ export default function TestimonialsManagement() {
                           )}
                         </div>
                         <div className="text-sm text-gray-600 mb-2">
-                          {testimonial.customerTitle && (
-                            <span>{testimonial.customerTitle}</span>
-                          )}
-                          {testimonial.customerCompany && (
-                            <span> • {testimonial.customerCompany}</span>
-                          )}
                           {testimonial.customerLocation && (
                             <span> • {testimonial.customerLocation}</span>
                           )}
@@ -187,12 +181,6 @@ export default function TestimonialsManagement() {
                             <div className="space-y-4">
                               <div className="text-center">
                                 <h3 className="font-semibold text-lg">{testimonial.customerName}</h3>
-                                {testimonial.customerTitle && (
-                                  <p className="text-gray-600">{testimonial.customerTitle}</p>
-                                )}
-                                {testimonial.customerCompany && (
-                                  <p className="text-gray-600">{testimonial.customerCompany}</p>
-                                )}
                                 {testimonial.customerLocation && (
                                   <p className="text-sm text-gray-500">{testimonial.customerLocation}</p>
                                 )}
@@ -277,12 +265,6 @@ export default function TestimonialsManagement() {
                           <div>
                             <p className="font-medium">{testimonial.customerName}</p>
                             <div className="text-sm text-gray-500">
-                              {testimonial.customerTitle && (
-                                <span>{testimonial.customerTitle}</span>
-                              )}
-                              {testimonial.customerCompany && (
-                                <span> • {testimonial.customerCompany}</span>
-                              )}
                             </div>
                             {testimonial.customerLocation && (
                               <p className="text-xs text-gray-400">{testimonial.customerLocation}</p>
@@ -326,12 +308,6 @@ export default function TestimonialsManagement() {
                                 <div className="space-y-4">
                                   <div className="text-center">
                                     <h3 className="font-semibold text-lg">{testimonial.customerName}</h3>
-                                    {testimonial.customerTitle && (
-                                      <p className="text-gray-600">{testimonial.customerTitle}</p>
-                                    )}
-                                    {testimonial.customerCompany && (
-                                      <p className="text-gray-600">{testimonial.customerCompany}</p>
-                                    )}
                                     {testimonial.customerLocation && (
                                       <p className="text-sm text-gray-500">{testimonial.customerLocation}</p>
                                     )}

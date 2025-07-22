@@ -4,7 +4,6 @@ import { useLocation } from "wouter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,7 +13,7 @@ import { z } from "zod";
 import { Loader2, Ship, Truck, Plane } from "lucide-react";
 import fastCfsLogo from "@assets/FAST CFS Logo - PNG_1752129714357.png";
 import { useToast } from "@/hooks/use-toast";
-import { Helmet } from "react-helmet-async";
+
 const loginSchema = z.object({
   username: z.string().min(1, "Username is required"),
   password: z.string().min(1, "Password is required"),
@@ -53,7 +52,7 @@ export default function AuthPage() {
   useEffect(() => {
     if (user) {
       setRedirecting(true);
-      window.location.assign("/admin");
+      window.location.assign("/fcfstube");
     }
   }, [user]);
 
@@ -69,7 +68,7 @@ export default function AuthPage() {
   const onLoginSubmit = (data: LoginData) => {
     loginMutation.mutate(data, {
       onSuccess: () => {
-        window.location.assign("/admin");
+        window.location.assign("/fcfstube");
       }
     });
   };
@@ -161,7 +160,7 @@ export default function AuthPage() {
                   </Form>
                 </TabsContent>
 
-                {/* COMMENT FOR HIDING REGISTER TAB STARTS HERE */}
+                {/* 
                 <TabsContent value="register" className="space-y-4">
                   <Form {...(registerForm as any)}>
                     <form onSubmit={registerForm.handleSubmit(onRegisterSubmit)} className="space-y-4">
@@ -204,8 +203,7 @@ export default function AuthPage() {
                     </form>
                   </Form>
                 </TabsContent>
-                {/* COMMENT FOR HIDING REGISTER TAB STARTS HERE */}
-              
+                */}
               </Tabs>
             </CardContent>
           </Card>

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import AdminLayout from "@/components/admin/admin-layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Package, FileText, MessageSquare, Mail, TrendingUp, Users, Globe, Calendar } from "lucide-react";
+import { Package, FileText, MessageSquare, Mail } from "lucide-react";
 import { formatDate } from "@/lib/utils";
 import type { Cargo, ContactSubmission, Testimonial, BlogPost } from "@shared/schema";
 import { useLocation } from "wouter";
@@ -18,7 +18,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     if (!isLoading && !user) {
       setRedirecting(true);
-      setLocation("/auth");
+      setLocation("/afoxinfcfs");
     }
   }, [isLoading, user, setLocation]);
 

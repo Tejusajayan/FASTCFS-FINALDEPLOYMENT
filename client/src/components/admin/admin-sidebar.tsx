@@ -30,14 +30,14 @@ import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
 const navigation = [
-  { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
-  { name: "Cargo Management", href: "/admin/cargo", icon: Package },
-  { name: "Blog Management", href: "/admin/blog", icon: FileText },
-  { name: "Testimonials", href: "/admin/testimonials", icon: MessageSquare },
-  { name: "Branches", href: "/admin/branches", icon: MapPin },
-  { name: "Contact Submissions", href: "/admin/contact-submissions", icon: Mail },
-  { name: "FAQ Management", href: "/admin/faq", icon: HelpCircle },
-  { name: "SEO Settings", href: "/admin/seo", icon: Settings },
+  { name: "Dashboard", href: "/fcfstube", icon: LayoutDashboard },
+  { name: "Cargo Management", href: "/fcfstube/cargo", icon: Package },
+  { name: "Blog Management", href: "/fcfstube/blog", icon: FileText },
+  { name: "Testimonials", href: "/fcfstube/testimonials", icon: MessageSquare },
+  { name: "Branches", href: "/fcfstube/branches", icon: MapPin },
+  { name: "Contact Submissions", href: "/fcfstube/contact-submissions", icon: Mail },
+  { name: "FAQ Management", href: "/fcfstube/faq", icon: HelpCircle },
+  { name: "SEO Settings", href: "/fcfstube/seo", icon: Settings },
 ];
 
 interface AdminSidebarProps {
@@ -53,7 +53,7 @@ export default function AdminSidebar({ className = "" }: AdminSidebarProps) {
   const handleLogout = () => {
     logoutMutation.mutate(undefined, {
       onSuccess: () => {
-        setLocation("/auth");
+        setLocation("/afoxinfcfs");
       }
     });
   };

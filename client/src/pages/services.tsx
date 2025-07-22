@@ -3,25 +3,14 @@ import Footer from "@/components/layout/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Ship, 
-  Plane, 
-  Truck, 
-  Warehouse, 
-  FileText, 
-  Shield,
-  Clock,
-  Globe,
-  Package,
-  ArrowRight,
-  CheckCircle
-} from "lucide-react";
+import { Ship, Plane, Truck, Warehouse, FileText, Globe, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
 import seaservice from "@/assets/SERVICES_SEA.jpg";
 import landservice from "@/assets/SERVICE_LAND1.jpg";
 import airservice from "@/assets/SERVICES_AIR.jpg";
+import favi from "@assets/favicon.ico";
 
 const services = [
   {
@@ -126,7 +115,7 @@ export default function ServicesPage() {
         <meta property="og:description" content={seo?.description || "Comprehensive logistics solutions designed to meet your unique shipping and supply chain requirements"} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fastcfs.com/services" />
-        <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href={favi} />
       </Helmet>
       <Header />
       

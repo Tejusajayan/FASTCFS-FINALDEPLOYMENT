@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Faq } from "@shared/schema";
 import { Helmet } from "react-helmet-async";
+import favi from "@assets/favicon.ico";
 
 export default function FaqPage() {
   const { data: faqs = [], isLoading, isError, error } = useQuery<Faq[]>({
@@ -37,26 +38,14 @@ export default function FaqPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>{seo?.title || "FAQs | FAST CFS"}</title>
-        <meta
-          name="description"
-          content={
-            seo?.description ||
-            "Quick answers to common logistics questions"
-          }
-        />
+        <meta name="description" content={seo?.description || "Quick answers to common logistics questions"} />
         {seo?.keywords && <meta name="keywords" content={seo.keywords} />}
         {seo?.ogImage && <meta property="og:image" content={seo.ogImage} />}
         <meta property="og:title" content={seo?.title || "FAQs | FAST CFS"} />
-        <meta
-          property="og:description"
-          content={
-            seo?.description ||
-            "Quick answers to common logistics questions"
-          }
-        />
+        <meta property="og:description" content={seo?.description || "Quick answers to common logistics questions"} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fastcfs.com/faq" />
-        <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href={favi} />
       </Helmet>
       <Header />
       <div className="pt-16">

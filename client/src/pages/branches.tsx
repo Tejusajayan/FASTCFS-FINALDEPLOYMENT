@@ -10,6 +10,7 @@ import { useState } from "react";
 import type { Branch } from "@shared/schema";
 import { Helmet } from "react-helmet-async";
 import branchQrPdf from "@/assets/BRANCH LOCATION QR CODES.pdf";
+import favi from "@/assets/favicon.ico";
 
 export default function BranchesPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -63,7 +64,7 @@ export default function BranchesPage() {
           <meta property="og:description" content={seo?.description || "Strategic locations across Dubai and Africa to serve your logistics needs"} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://fastcfs.com/branches" />
-          <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+          <link rel="icon" type="image/x-icon" href={favi} />
         </Helmet>
         <Header />
         <div className="pt-16">

@@ -11,6 +11,7 @@ import DOMPurify from "dompurify";
 import { Helmet } from "react-helmet-async";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import favi from "@assets/favicon.ico";
 
 export default function CargoTrackingPage() {
   const [trackingNumber, setTrackingNumber] = useState("");
@@ -125,7 +126,7 @@ export default function CargoTrackingPage() {
         <meta property="og:description" content={seo?.description || "Get real-time updates on your air shipment status and location"} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fastcfs.com/cargo-tracking" />
-        <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href={favi} />
       </Helmet>
       <Header />
       <div className="pt-16">
