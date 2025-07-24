@@ -9,7 +9,7 @@ import { MapPin, Phone, Mail, Clock, Search, Building } from "lucide-react";
 import { useState } from "react";
 import type { Branch } from "@shared/schema";
 import { Helmet } from "react-helmet-async";
-import branchQrPdf from "@/assets/BRANCH LOCATION QR CODES.pdf";
+import branchQrPdf from "@/assets/BRANCH LOCATION.pdf";
 import favi from "@/assets/favicon.ico";
 
 export default function BranchesPage() {
