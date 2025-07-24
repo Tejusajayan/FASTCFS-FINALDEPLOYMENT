@@ -59,7 +59,7 @@ html {
 
 @layer base {
   * {
-    @apply border-border;
+    
   }
 
   body {
@@ -68,6 +68,14 @@ html {
 }
 
 @layer utilities {
+
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  
   .fast-blue {
     color: var(--fast-blue);
   }

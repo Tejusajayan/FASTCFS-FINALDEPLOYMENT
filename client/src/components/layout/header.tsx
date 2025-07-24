@@ -10,7 +10,7 @@ const navigation = [
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Blog", href: "/blog" },
-  { name: "Air Cargo Tracking", href: "/cargo-tracking" },
+  { name: "Cargo Tracking", href: "/cargo-tracking" },
   { name: "Branches", href: "/branches" },
   { name: "FAQ", href: "/faq" }, // FAQ before Contact
   { name: "Contact", href: "/contact" },

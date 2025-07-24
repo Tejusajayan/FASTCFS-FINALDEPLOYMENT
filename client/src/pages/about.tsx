@@ -8,8 +8,8 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
 import cfo from "@assets/RENJIT.jpg";
-import boss from "@assets/Kannan.jpg";
-import gm from "@assets/Sreekumar.jpg";
+import boss from "@assets/KANNAN.jpg";
+import gm from "@assets/SREEKUMAR.jpg";
 import aboutvessel from "@/assets/ABOUT_US.jpg";
 import favi from "@/assets/favicon.ico";
 
