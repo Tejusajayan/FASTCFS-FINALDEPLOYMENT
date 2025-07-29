@@ -27,7 +27,7 @@ const sessionStore = new PgSession({
 const app = express();
 
 app.use(cors({
-    origin: 'https://www.fastcfscn.com', // change to your domain in production for security
+    origin: 'https://www.fastcfs.com', // change to your domain in production for security
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   }));
@@ -47,22 +47,6 @@ app.use(
 // Create storage with the same session store
 const storage = createStorage(sessionStore);
 
-// Remove this verbose logging middleware:
-// app.use((req, res, next) => {
-//   const start = Date.now();
-//   const path = req.path;
-
-//   res.on("finish", () => {
-//     const duration = Date.now() - start;
-//     // Only log API requests, ignore static/frontend requests
-//     if (path.startsWith("/api")) {
-//       log(`${req.method} ${path} ${res.statusCode} in ${duration}ms`);
-//     }
-//   });
-
-//   next();
-// });
-
 (async () => {
   // Pass storage to registerRoutes
   const server = await registerRoutes(app, storage);
@@ -75,18 +59,14 @@ const storage = createStorage(sessionStore);
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
+  
   if (app.get("env") === "development") {
     await setupVite(app, server); // Pass app and server
   } else {
     serveStatic(app); // Pass app
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
+
   const port = 5000;
   server.listen(
     port,

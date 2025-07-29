@@ -118,7 +118,7 @@ export default function CargoTrackingPage() {
   // Handler for Sea Cargo button
   const handleSeaCargoClick = () => {
     // TODO: Replace the URL below with your actual Sea Cargo tracking website link
-    window.location.href = "https://your-sea-cargo-tracking-website.com";
+    window.location.href = "https://www.fastcfs.com";
   };
 
   return (
